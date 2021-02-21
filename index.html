@@ -27,11 +27,22 @@
 
 
 
-
+    <script>
+        window.addEventListener('load', function () {
+            var load_screen = document.getElementById('load_screen');
+            setTimeout(() => {
+                document.body.removeChild(load_screen);
+            }, 3000);
+        })
+    </script>
 
 </head>
 
 <body style="overflow-x: hidden;">
+    <div id="load_screen">
+        <div class="loader"></span>
+        </div>
+    </div>
     <div class="container-fluid ">
         <header class=" d-flex d-flex flex-column flex-lg-row d-flex justify-content-between">
             <div class="logo mt-3 ml-0 ml-md-5">
@@ -247,7 +258,7 @@
                     <h2>Zróbmy razem coś fajnego</h2>
                 </div>
                 <div class="form__formular d-flex flex-column justify-content-center">
-                    <form class="d-flex flex-column" action="./index.php" method="post">
+                    <form class="d-flex flex-column" action="./index.php">
                         <label for="name">Imię i nazwisko </label>
                         <input type="text" name="name" id="name" placeholder="Twoje imię i nazwisko..." required>
                         <label for="email">Adres e-mail</label>
