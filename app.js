@@ -44,7 +44,6 @@ var recommendationsMap = document.querySelector(".recommendations__map");
 var recommendationsSlider = document.querySelector(".recommendations__slider");
 
 let text = [...textAbout.innerText];
-textAbout.innerText = "";
 
 var letterIndex = -1;
 let once = 0;
@@ -54,20 +53,21 @@ function addLetter() {
     setTimeout(function () {
       textAbout.textContent += text[letterIndex];
       addLetter();
-    }, 50);
+    }, 40);
   }
 }
 document.addEventListener("scroll", () => {
+  if (`${scetionGallery.offsetTop - 200}` < window.scrollY) {
+    scetionGallery.style.animationPlayState = "running";
+  }
   if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
     if (once > 1) return;
     else {
+      textAbout.innerText = "";
       once++;
       scetionAbout.style.animationPlayState = "running";
       addLetter();
     }
-  }
-  if (`${scetionGallery.offsetTop - 200}` < window.scrollY) {
-    scetionGallery.style.animationPlayState = "running";
   }
   if (`${portfolioHeadline.offsetTop - 600}` < window.scrollY) {
     portfolioHeadline.style.animationPlayState = "running";
