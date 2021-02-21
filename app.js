@@ -43,9 +43,34 @@ var recommendationsHeadline = document.querySelector(
 var recommendationsMap = document.querySelector(".recommendations__map");
 var recommendationsSlider = document.querySelector(".recommendations__slider");
 
+let text = [...textAbout.innerText];
+textAbout.innerText = "";
+
+var letterIndex = -1;
+let once = 0;
+function addLetter() {
+  // increment letterIndex to get to the next letter
+  letterIndex++;
+  //
+  if (letterIndex < text.length) {
+    //ADD A DELAY
+    setTimeout(function () {
+      // add letter
+      textAbout.textContent += text[letterIndex];
+      console.log(text[letterIndex]);
+      // call itself
+      addLetter();
+    }, 50);
+  }
+}
 document.addEventListener("scroll", () => {
   if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
-    scetionAbout.style.animationPlayState = "running";
+    if (once > 1) return;
+    else {
+      once++;
+      scetionAbout.style.animationPlayState = "running";
+      addLetter();
+    }
   }
   if (`${scetionGallery.offsetTop - 200}` < window.scrollY) {
     scetionGallery.style.animationPlayState = "running";
