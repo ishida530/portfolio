@@ -1,0 +1,111 @@
+body {
+  .section__form {
+    margin-top: 100px;
+    width: 100%;
+    .form__headline {
+      h2 {
+        text-align: center;
+        font-size: 60px;
+        color: #fff;
+      }
+    }
+    .form__formular {
+      margin: 50px auto;
+      form {
+        width: 400px;
+        margin: 0 auto;
+        label {
+          margin-top: 15px;
+          color: #fff;
+          text-align: left;
+          margin-bottom: 2px;
+        }
+        input {
+          width: 400px;
+        }
+        .message {
+          margin-top: 0;
+          width: 400px;
+        }
+        .sendBtn {
+          margin-top: 20px;
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 414px) {
+  body {
+    .section__form {
+      .form__headline {
+        h2 {
+          font-size: 30px;
+          color: #fff;
+          padding: 0 20px;
+        }
+      }
+      .form__formular {
+        margin: 50px auto;
+        form {
+          width: 250px;
+          margin: 0 auto;
+          label {
+            margin-top: 15px;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 2px;
+          }
+          input {
+            width: 200px;
+          }
+          .message {
+            margin-top: 0;
+            width: 250px;
+          }
+          .sendBtn {
+            margin-top: 20px;
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  body {
+    .section__form {
+      .form__headline {
+        h2 {
+          font-size: 30px;
+          color: #fff;
+          padding: 0 20px;
+        }
+      }
+      .form__formular {
+        margin: 50px auto;
+        form {
+          width: 250px;
+          margin: 0 auto;
+          label {
+            margin-top: 15px;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 2px;
+          }
+          input {
+            width: 200px;
+          }
+          .message {
+            margin-top: 0;
+            width: 250px;
+          }
+          .sendBtn {
+            margin-top: 20px;
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+}

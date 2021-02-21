@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+html body {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #0e0c38;
+  font-family: "Poppins", sans-serif;
+}
+
+html body header {
+  background-color: transparent;
+  position: relative;
+}
+
+html body header .header__div__logo {
+  z-index: 21;
+  background-color: transparent;
+  position: relative;
+}
+
+html body header .header__div__logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html body header .header__div__background {
+  position: absolute;
+  top: -25%;
+  left: 13%;
+  -webkit-transform: translate(-181px, 71px);
+          transform: translate(-181px, 71px);
+  background-color: transparent;
+  z-index: -3;
+  height: 180px;
+}
+
+html body header nav .nav__div__list {
+  width: 100%;
+}
+
+html body header nav .nav__div__list .nav__div__item {
+  position: relative;
+  margin-left: 00px;
+  color: #fff !important;
+  font-size: 22px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 160px;
+}
+
+html body header nav .nav__div__list .nav__div__item::after {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  width: 160px;
+  height: 5px;
+  background-color: transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html body header nav .nav__div__list .nav__div__item:hover::after {
+  background-color: rgba(255, 1, 1, 0.7);
+  height: 220px;
+  z-index: -1;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 30px;
+}
+
+html body header nav .nav__div__list .recoBtn {
+  margin-right: 200px;
+}
+
+html body header nav .nav__div__list .recoBtn::after {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  width: 200px;
+  height: 5px;
+  background-color: transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html body header nav .nav__div__list .nav__div__button {
+  width: 200px;
+  height: 72px;
+  position: relative;
+  padding: 1em 1.5em;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  margin: 1em 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+
+html body header nav .nav__div__list .nav__div__button:hover {
+  color: #ff0101;
+}
+
+html body header nav .nav__div__list .nav__div__button.type3 {
+  color: #fff;
+}
+
+html body header nav .nav__div__list .nav__div__button.type3.type3::after, html body header nav .nav__div__list .nav__div__button.type3.type3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 4px solid;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 2px;
+}
+
+html body header nav .nav__div__list .nav__div__button.type3.type3::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+
+html body header nav .nav__div__list .nav__div__button.type3.type3::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+html body header nav .nav__div__list .nav__div__button.type3.type3:hover:after, html body header nav .nav__div__list .nav__div__button.type3.type3:hover:before {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  width: 110%;
+  height: 116%;
+  border-color: #ff0101;
+}
+
+@media (max-width: 992px) {
+  html body header nav .nav__div__list {
+    width: 100%;
+  }
+  html body header nav .nav__div__list .nav__div__item {
+    margin-left: 00px;
+    position: relative;
+  }
+  html body header nav .nav__div__list .nav__div__item a {
+    overflow: hidden;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  html body header nav .nav__div__list .nav__div__item::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  html body header nav .nav__div__list .nav__div__item:hover::after {
+    background-color: #ff0101;
+    height: 2px;
+    width: 100%;
+    z-index: 6;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  html body header nav .nav__div__list .nav__div__item .recoBtn {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  html body header nav .nav__div__list {
+    width: 100%;
+  }
+  html body header nav .nav__div__list .nav__div__item {
+    margin-left: 00px;
+  }
+  html body header nav .nav__div__list .nav__div__item a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: red;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  html body header nav .nav__div__list .nav__div__item a:hover::after {
+    background-color: #ff0101;
+    left: -20px;
+    right: 00px;
+    bottom: 0;
+    height: 2px;
+    width: 200px;
+    z-index: 6;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

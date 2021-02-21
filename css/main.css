@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap");
+.main {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.main .main__welcome {
+  color: #fff;
+}
+
+.main .main__welcome .main__welcome__name .hello {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.main .main__welcome .main__welcome__name h1 {
+  font-size: 150px;
+  font-weight: bold;
+}
+
+.main .main__welcome .main__welcome__name .position {
+  font-size: 26px;
+  font-weight: 100;
+}
+
+.main .main__welcome .main__welcome__name .position span {
+  color: red;
+}
+
+.main .main__welcome .main__welcome__social p {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.main .main__welcome .main__welcome__social i {
+  color: #fff;
+}
+
+.main .main__welcome .main__welcome__buttons {
+  /* optional reset for presentation */
+}
+
+.main .main__welcome .main__welcome__buttons .hireMeBtn {
+  display: inline-block;
+  width: 280px;
+  line-height: 90px;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 0.15rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+}
+
+.main .main__welcome .main__welcome__buttons .hireMeBtn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+  border: 4px solid #fff;
+}
+
+.main .main__welcome .main__welcome__buttons .hireMeBtn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff0101;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.main .main__welcome .main__welcome__buttons .hireMeBtn:hover {
+  color: #fff;
+}
+
+.main .main__welcome .main__welcome__buttons .hireMeBtn:hover:before {
+  width: 100%;
+  border: 4px solid #fff;
+}
+
+.main .main__welcome .main__welcome__buttons * {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.main .main__welcome .main__welcome__buttons .container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.main .main__welcome .main__welcome__buttons span {
+  display: block;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.main .main__welcome .main__welcome__buttons span a {
+  font-size: 0.7rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.main .main__photo {
+  height: 600px;
+  width: 100%;
+}
+
+.main .main__photo img {
+  border-radius: 50%;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1320px) {
+  .main {
+    margin-top: 13%;
+    width: 100%;
+  }
+  .main .main__welcome .main__welcome__name .hello {
+    font-size: 30px;
+  }
+  .main .main__welcome .main__welcome__name h1 {
+    font-size: 90px;
+  }
+  .main .main__welcome .main__welcome__name .position {
+    font-size: 18px;
+  }
+  .main .main__welcome .main__welcome__social {
+    margin-top: 10%;
+  }
+  .main .main__welcome .main__welcome__social p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .main .main__welcome .main__welcome__social i {
+    color: #fff;
+  }
+  .main .main__welcome .main__welcome__buttons {
+    /* optional reset for presentation */
+  }
+  .main .main__welcome .main__welcome__buttons .hireMeBtn {
+    width: 200px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .main .main__welcome .main__welcome__buttons .hireMeBtn:after {
+    content: "";
+  }
+  .main .main__welcome .main__welcome__buttons .hireMeBtn:before {
+    content: "";
+  }
+  .main .main__welcome .main__welcome__buttons .hireMeBtn:hover {
+    color: #fff;
+  }
+  .main .main__welcome .main__welcome__buttons .hireMeBtn:hover:before {
+    width: 100%;
+    border: 4px solid #fff;
+  }
+  .main .main__welcome .main__welcome__buttons * {
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .main .main__welcome .main__welcome__buttons .container {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  .main .main__welcome .main__welcome__buttons span {
+    display: block;
+    font-size: 0.7rem;
+    color: #fff;
+  }
+  .main .main__welcome .main__welcome__buttons span a {
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: underline;
+  }
+  .main .main__photo {
+    height: 600px;
+    width: 100%;
+  }
+  .main .main__photo img {
+    height: 65%;
+    border-radius: 50%;
+    opacity: 0.8;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 960px) {
+  .main {
+    margin-top: 13%;
+    width: 100%;
+  }
+  .main .main__photo {
+    height: 600px;
+    width: 100%;
+  }
+  .main .main__photo img {
+    margin-left: 50px;
+    height: 50%;
+    border-radius: 50%;
+    opacity: 0.8;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 414px) {
+  .main {
+    height: 120vh;
+    margin-top: 13%;
+    width: 100%;
+  }
+  .main .main__welcome .main__welcome__name .hello {
+    font-size: 20px;
+  }
+  .main .main__welcome .main__welcome__name h1 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .main .main__welcome .main__welcome__name .position {
+    font-size: 15px;
+  }
+  .main .main__welcome .main__welcome__social {
+    margin-top: 10%;
+  }
+  .main .main__welcome .main__welcome__social p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .main .main__welcome .main__welcome__social i {
+    font-size: 20px;
+    color: #fff;
+  }
+  .main .main__photo {
+    height: 600px;
+    width: 100%;
+  }
+  .main .main__photo img {
+    margin-left: 0px;
+    height: 30%;
+    border-radius: 50%;
+    opacity: 0.8;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*# sourceMappingURL=main.css.map */
