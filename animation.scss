@@ -3,9 +3,14 @@ body {
     animation: sectionAbout 2s infinite;
     animation-iteration-count: 1;
     animation-play-state: paused;
+    .txt::after {
+      content: "|";
+      margin-left: 0.2em;
+      animation: blinkCursor 1.2s linear infinite;
+    }
   }
   .section__gallery {
-    animation: sliderAbout 2s infinite;
+    animation: sliderAbout 1s infinite;
     animation-iteration-count: 1;
     animation-play-state: paused;
   }
@@ -46,7 +51,20 @@ body {
     animation-play-state: paused;
   }
 }
-
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes sectionAbout {
   from {
     transform: translateX(-120%);
