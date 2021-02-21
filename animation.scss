@@ -10,12 +10,13 @@ body {
     }
   }
   .section__gallery {
-    animation: sliderAbout 1s infinite;
+    width: 100%;
+    animation: sliderAbout 2s infinite;
     animation-iteration-count: 1;
     animation-play-state: paused;
   }
   .portfolio__headline {
-    animation: portfolioHeadline 2s infinite;
+    animation: portfolioHeadline 1s infinite;
     animation-iteration-count: 1;
     animation-play-state: paused;
   }
