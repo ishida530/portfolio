@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAGM,IAHF,CACF,yBAAyB,CACvB,0BAA0B,CACxB,EAAE,CAAC;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "../recomendations.scss"
+    ],
+    "names": [],
+    "file": "recomendations.css"
+}
