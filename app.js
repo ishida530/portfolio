@@ -61,7 +61,7 @@ document.addEventListener("scroll", () => {
     scetionGallery.style.animationPlayState = "running";
   }
   if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
-    if (once > 1) return;
+    if (once > 1);
     else {
       textAbout.innerText = "";
       once++;
@@ -69,6 +69,7 @@ document.addEventListener("scroll", () => {
       addLetter();
     }
   }
+
   if (`${portfolioHeadline.offsetTop - 600}` < window.scrollY) {
     portfolioHeadline.style.animationPlayState = "running";
   }
