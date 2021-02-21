@@ -249,43 +249,22 @@
 
                         <input class="sendBtn" name="sbumit" type="submit" value="Wyślij">
 
-                        <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+                       <?php
+   $header = "From: ishida530@gmail.com \nContent-Type:".
+             ' text/plain;charset="UTF-8"'.
+             "\nContent-Transfer-Encoding: 8bit";
+   $to = "ishida530@gmail.com";
+   $subject = "Wiadomość testowa";
+   $message = "Witaj to wiadomość testowa";
+   mail($to, $subject, $message, $header)
 
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';
-
-$mail =new PHPMailer();
-$mail->Host = "smtp.wp.pl";
-
-$mail->Username = "p_jerzy530@wp.pl";
-$mail->Password = "majtki12";
-
-$mail->SMTP = true;
-$mail-> SMPTSecure = "ssl";
-$mail->Port = 465;
-
-
-
-$mail->Subject = "test";
-$mail->Body = "this is out body";
-
-
-        
-
-
-
-
-
-
-if ($mail->send())
-echo '<h2>Wiadomość została wysłana.</h2>';
-else 
-echo '<h2>Coś poszło nie tak :/</h2>';
-
-
+       if(mail($to, $subject, $message, $header)){
+   echo "<h2>Poprawnie wysłano e-mail</h2>";
+}
+else{
+   echo "<h2>Wystąpił nieoczekiwany błąd, spróbuj jeszcze raz...</h2>"
+}
+       
 ?>
 
 
