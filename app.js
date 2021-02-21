@@ -49,16 +49,10 @@ textAbout.innerText = "";
 var letterIndex = -1;
 let once = 0;
 function addLetter() {
-  // increment letterIndex to get to the next letter
   letterIndex++;
-  //
   if (letterIndex < text.length) {
-    //ADD A DELAY
     setTimeout(function () {
-      // add letter
       textAbout.textContent += text[letterIndex];
-      console.log(text[letterIndex]);
-      // call itself
       addLetter();
     }, 50);
   }
