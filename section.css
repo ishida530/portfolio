@@ -1,0 +1,311 @@
+html {
+  overflow-x: hidden;
+}
+
+html body {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+html body section {
+  background-color: #040221;
+  margin-top: 10%;
+  height: 100vh;
+}
+
+html body section .section__about {
+  color: #fff;
+}
+
+html body section .section__about h2 {
+  font-size: 60px;
+  position: relative;
+  margin-top: 150px;
+}
+
+html body section .section__about h2::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+  right: 0%;
+  width: 400px;
+  height: 5px;
+  background-color: red;
+  content: "";
+  display: block;
+}
+
+html body section .section__about div p {
+  margin-top: 80px;
+  font-size: 24px;
+  line-height: 55px;
+}
+
+html body section .section__about .cv {
+  margin-top: 150px;
+  display: inline-block;
+  width: 350px;
+  line-height: 70px;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 60px;
+  text-decoration: none;
+  /* optional reset for presentation */
+}
+
+html body section .section__about .cv:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10rem;
+  z-index: -2;
+  border: 4px solid #fff;
+}
+
+html body section .section__about .cv:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff0101;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+html body section .section__about .cv:hover {
+  color: #fff;
+}
+
+html body section .section__about .cv:hover:before {
+  width: 100%;
+  border: 4px solid #fff;
+}
+
+html body section .section__about .cv * {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+html body section .section__about .cv .container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+html body section .section__about .cv span {
+  display: block;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+html body section .section__about .cv span a {
+  font-size: 0.7rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+html body section .section__gallery {
+  position: relative;
+}
+
+html body section .section__gallery div .swiper-container {
+  width: 855px;
+  height: 955px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: #0e0c38;
+  border: 50px solid #0e0c38;
+  border-bottom: 74px solid #0e0c38;
+  border-top: 74px solid #0e0c38;
+  border-left: 66px solid #0e0c38;
+  border-right: 66px solid #0e0c38;
+}
+
+html body section .section__gallery div .swiper-container .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+html body section .section__gallery div .swiper-container .dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8px;
+  height: 8px;
+}
+
+html body section .section__gallery div .arrowNext {
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+html body section .section__gallery div .arrowNext::after {
+  padding: 10px;
+}
+
+html body section .section__gallery div .arrowNext:focus {
+  outline: none;
+}
+
+html body section .section__gallery div .arrowNext:hover {
+  background-color: red;
+}
+
+html body section .section__gallery div .arrowPrev {
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+html body section .section__gallery div .arrowPrev:hover {
+  background-color: red;
+}
+
+html body section .section__gallery div .arrowPrev:focus {
+  outline: none;
+}
+
+@media (max-width: 1700px) {
+  body section .section_gallery .swiper-container {
+    left: 40%;
+    top: 50%;
+    width: 750px;
+    height: 850px;
+  }
+  body section .arrowNext {
+    top: 98%;
+    left: 60%;
+  }
+  body section .arrowPrev {
+    top: 98%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 1600px) {
+  body section .section_gallery .swiper-container {
+    left: 40%;
+    top: 50%;
+    width: 650px;
+    height: 750px;
+  }
+  body section .section_gallery .arrowNext {
+    top: 90%;
+    left: 60%;
+  }
+  body section .section_gallery .arrowPrev {
+    top: 90%;
+    left: 45%;
+  }
+}
+
+@media (max-width: 1500px) {
+  body section .section__about h2::after {
+    width: 250px;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  body section .section_gallery .swiper-container {
+    left: 40%;
+    top: 50%;
+    width: 550px;
+    height: 650px;
+  }
+  body section .section_gallery .arrowNext {
+    top: 90%;
+    left: 60%;
+  }
+  body section .section_gallery .arrowPrev {
+    top: 90%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  body section .section__about h2::after {
+    width: 200px;
+    -webkit-transform: translate(-100px, 50px);
+            transform: translate(-100px, 50px);
+  }
+  body section .section_gallery .swiper-container {
+    left: 60%;
+    top: 50%;
+    width: 550px;
+    height: 650px;
+  }
+  body section .section_gallery .arrowNext {
+    top: 90%;
+    left: 60%;
+  }
+  body section .section_gallery .arrowPrev {
+    top: 90%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    height: auto;
+  }
+  body section .section__about h2::after {
+    width: 300px;
+    -webkit-transform: translate(-140px, 50px);
+            transform: translate(-140px, 50px);
+    display: none;
+  }
+  body section .section__about h2 div p {
+    width: 90%;
+  }
+  body section .section_gallery .swiper-container {
+    left: 50%;
+    top: 0%;
+    width: 650px;
+    height: 750px;
+  }
+  body section .section_gallery .arrowNext {
+    top: 20%;
+    left: 60%;
+  }
+  body section .section_gallery .arrowPrev {
+    top: 20%;
+    left: 40%;
+  }
+}
+/*# sourceMappingURL=section.css.map */

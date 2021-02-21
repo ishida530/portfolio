@@ -1,0 +1,127 @@
+body {
+  .section__about {
+    animation: sectionAbout 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .section__gallery {
+    animation: sliderAbout 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .portfolio__headline {
+    animation: portfolioHeadline 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .portfolio__gallery {
+    animation: portfolioGallery 3s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .technologies__headline {
+    animation: technologiesHeadline 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .technologies__gallery {
+    animation: technologiesGallery 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .recommendations__headline {
+    animation: recommendationsHeadline 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+
+  .recommendations__map {
+    animation: recommendationsMap 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+  .recommendations__slider {
+    animation: recommendationsSlider 2s infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes sectionAbout {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes sliderAbout {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes portfolioHeadline {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes portfolioGallery {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes technologiesHeadline {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes technologiesGallery {
+  0% {
+    filter: blur(10px);
+    transform: scale(0);
+  }
+
+  100% {
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes recommendationsHeadline {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes recommendationsMap {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes recommendationsSlider {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

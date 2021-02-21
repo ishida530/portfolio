@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Variables
+$color: #fff;
+$body-color: #ecf0f1;
+$color1: #fff;
+$color2: #fff;
+$color3: #fff;
+$color4: #fff;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+html {
+  margin: 0 auto;
+  scroll-behavior: smooth;
+
+  body {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #0e0c38;
+    font-family: "Poppins", sans-serif;
+    header {
+      background-color: transparent;
+      position: relative;
+
+      .header__div__logo {
+        z-index: 21;
+        background-color: transparent;
+        position: relative;
+        img {
+          object-fit: cover;
+        }
+      }
+      .header__div__background {
+        position: absolute;
+        top: -25%;
+        left: 13%;
+        transform: translate(-181px, 71px);
+        background-color: transparent;
+        z-index: -3;
+        height: 180px;
+      }
+      nav {
+        .nav__div__list {
+          width: 100%;
+
+          .nav__div__item {
+            position: relative;
+            margin-left: 00px;
+            color: #fff !important;
+            font-size: 22px;
+            transition: 0.4s;
+            width: 160px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: -150px;
+              left: 0px;
+              width: 160px;
+              height: 5px;
+              background-color: transparent;
+              transition: all 0.4s ease;
+            }
+            &:hover::after {
+              background-color: rgba(255, 1, 1, 0.7);
+              height: 220px;
+              z-index: -1;
+              border-bottom-right-radius: 10px;
+              border-bottom-left-radius: 30px;
+            }
+          }
+          .recoBtn {
+            margin-right: 200px;
+          }
+          .recoBtn::after {
+            content: "";
+            position: absolute;
+            top: -150px;
+            left: 0px;
+            width: 200px;
+            height: 5px;
+            background-color: transparent;
+            transition: all 0.4s ease;
+          }
+          .nav__div__button {
+            width: 200px;
+            height: 72px;
+            position: relative;
+            padding: 1em 1.5em;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            margin: 1em 0.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            &:hover {
+              color: rgb(255, 1, 1);
+            }
+            &.type3 {
+              color: $color3;
+
+              //Effect three
+              // Effect one
+              &.type3::after,
+              &.type3::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 20%;
+                height: 20%;
+                border: 4px solid;
+                transition: all 0.4s ease;
+                border-radius: 2px;
+              }
+              &.type3::after {
+                bottom: 0;
+                right: 0;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: $color3;
+                border-right-color: $color3;
+              }
+
+              &.type3::before {
+                top: 0;
+                left: 0;
+                border-bottom-color: transparent;
+                border-right-color: transparent;
+                border-top-color: $color3;
+                border-left-color: $color3;
+              }
+              &.type3:hover:after,
+              &.type3:hover:before {
+                border-bottom-color: $color3;
+                border-right-color: $color3;
+                border-top-color: $color3;
+                border-left-color: $color3;
+                width: 110%;
+                height: 116%;
+                border-color: rgb(255, 1, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  html {
+    body {
+      header {
+        nav {
+          .nav__div__list {
+            width: 100%;
+            .nav__div__item {
+              margin-left: 00px;
+              a {
+                overflow: hidden;
+                width: fit-content !important;
+              }
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0%;
+                width: 0%;
+                height: 2px;
+                background-color: red;
+                transition: all 0.4s ease;
+              }
+              &:hover::after {
+                background-color: rgb(255, 1, 1);
+                height: 2px;
+                width: 100%;
+                z-index: 6;
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+              }
+              .recoBtn {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  html {
+    body {
+      header {
+        nav {
+          .nav__div__list {
+            width: 100%;
+            .nav__div__item {
+              margin-left: 00px;
+              a {
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 0px;
+                  width: 0px;
+                  height: 2px;
+                  background-color: red;
+                  transition: all 0.4s ease;
+                }
+                &:hover::after {
+                  background-color: rgb(255, 1, 1);
+                  left: -20px;
+                  right: 00px;
+                  bottom: 0;
+                  height: 2px;
+                  width: 200px;
+                  z-index: 6;
+                  transform: translateX(20px);
+                  border-bottom-right-radius: 0px;
+                  border-bottom-left-radius: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
