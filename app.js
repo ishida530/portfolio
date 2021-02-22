@@ -67,7 +67,7 @@ document.addEventListener("scroll", () => {
       once++;
       scetionAbout.style.animationPlayState = "running";
       console.log("poszlo");
-      setTimeout(addLetter(), 5000);
+      setTimeout(addLetter(), 2300);
     }
   }
 
