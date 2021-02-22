@@ -53,7 +53,7 @@ function addLetter() {
     setTimeout(function () {
       textAbout.textContent += text[letterIndex];
       addLetter();
-    }, 40);
+    }, 100);
   }
 }
 document.addEventListener("scroll", () => {
@@ -61,19 +61,19 @@ document.addEventListener("scroll", () => {
     scetionGallery.style.animationPlayState = "running";
   }
   if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
-    if (once > 1);
-    else {
+    if (once > 1) {
+    } else {
       textAbout.innerText = "";
       once++;
       scetionAbout.style.animationPlayState = "running";
-      addLetter();
+      setTimeout(addLetter(), 2300);
     }
   }
 
-  if (`${portfolioHeadline.offsetTop - 600}` < window.scrollY) {
+  if (`${portfolioHeadline.offsetTop - 300}` < window.scrollY) {
     portfolioHeadline.style.animationPlayState = "running";
   }
-  if (`${portfolioGallery.offsetTop - 400}` < window.scrollY) {
+  if (`${portfolioGallery.offsetTop - 300}` < window.scrollY) {
     portfolioGallery.style.animationPlayState = "running";
   }
   if (`${technologiesHeadline.offsetTop - 500}` < window.scrollY) {
