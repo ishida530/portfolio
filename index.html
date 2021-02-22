@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <head>
-    <title>Title</title>
+    <title>Paweł Sawczuk portfolio </title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -27,11 +27,22 @@
 
 
 
-
+    <script>
+        window.addEventListener('load', function () {
+            var load_screen = document.getElementById('load_screen');
+            setTimeout(() => {
+                document.body.removeChild(load_screen);
+            }, 2500);
+        })
+    </script>
 
 </head>
 
 <body style="overflow-x: hidden;">
+    <div id="load_screen">
+        <div class="loader"></span>
+        </div>
+    </div>
     <div class="container-fluid ">
         <header class=" d-flex d-flex flex-column flex-lg-row d-flex justify-content-between">
             <div class="logo mt-3 ml-0 ml-md-5">
@@ -80,9 +91,12 @@
                     <div class="main__welcome__social mb-5 mb-lg-0">
                         <div class="">
                             <p class="findMe">Znajdź mnie na</p>
-                            <a id="linkedIcon" class="linkedIcon"
-                                href="https://www.linkedin.com/in/pawe%C5%82-sawczuk-a7a0911a6/"><img
-                                    src="./img/linked.png" alt=""></a>
+                            <div>
+                                <a id="linkedIcon" class="linkedIcon mr-5" href="https://github.com/ishida530"><img
+                                        src="./img/linked.png" alt=""></a>
+                                <a id="linkedIcon" class="linkedIcon" href="https://github.com/ishida530"><img
+                                        src="./img/github.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                     <div class="main__welcome__buttons mt-5 d-flex flex-column flex-md-row justify-content-start">
@@ -103,17 +117,15 @@
         <div class="row">
             <section class="section d-flex flex-column flex-xl-row " id="section__about">
                 <div class="section__about col-12 col-xl-6  align-items-between mt-5 ml-0 ml-md-5 mr-0 mr-md-5">
-                    <h2 class="">About Me</h2>
+                    <h2 class="">O mnie</h2>
                     <div class="">
-                        <p class="pr-0 pr-xs-3 txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Accusantium
-                            voluptate
-                            deserunt
-                            minus
-                            magnam a dignissimos laboriosam, illo culpa non omnis. <br><br> Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Voluptatibus, mollitia.</p>
+                        <p class="pr-0 pr-xs-3 txt"> Moim głównym celem zawodowym jest znalezienie pracy, która da mi
+                            możliwość pogłębienia i doskonalenia nabytych wcześniej umiejętności programistycznych,
+                            zaangażowania się w ciekawe i kreatywne projekty oraz podniesienia kwalifikacji z zakresu
+                            programowania Front-End. Przede wszystkim chcę się skupić na nauce języka Javascript i
+                            biblioteki React. </p>
                     </div>
-                    <a href="#" class="cv">Download CV</a>
+                    <a href="./CV Pawel Sawczuk ENG.pdf" class="cv">Pobierz CV CV</a>
                 </div>
                 <div class="section__gallery col-12 col-xl-6 ">
                     <div class="swiper-container ">
@@ -142,25 +154,27 @@
                 </div>
                 <div class="portfolio__gallery d-flex flex-row justify-content-between flex-wrap col-12 ">
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
-                        <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                        <div class="layerImg"><a href="https://ishida530.github.io/locationweathermap/">
+                                <img class="" src="./img/portfolio1.png" alt="">
+                                <p>API/AXIOS/JAVASCRIPT</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
                         <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                            <a href="https://ishida530.github.io/portfolio-projectone/">
+                                <img class="" src="./img/portfolio2.png" alt="">
+                                <p>HTML/SCSS/BOOTSTRAP/JQUERY</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
                         <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                            <a href="https://ishida530.github.io/lpexample/">
+                                <img class="" src="./img/portfolio3.png" alt="">
+                                <p>HTML/SCSS/BOOTSTRAP/JAVASCRIPT</p>
+                            </a>
                         </div>
                     </div>
 
@@ -224,7 +238,7 @@
                                                 class="d-block d-flex justify-content-start" style="text-align: start;">
                                                 - Marcin Matras <br>CTO & managing partner w NoMonday
                                             </span></p>
-                                        <a class="lookBtn mt-5" href="https://postimg.cc/K1rkDnvf">Podgląd</a>
+                                        <a class="lookBtn mt-5" href="./opinia-sawczuk_signed.pdf">Podgląd</a>
                                     </div>
                                 </div>
 
@@ -247,7 +261,7 @@
                     <h2>Zróbmy razem coś fajnego</h2>
                 </div>
                 <div class="form__formular d-flex flex-column justify-content-center">
-                    <form class="d-flex flex-column" action="./index.php">
+                    <form class="d-flex flex-column" action="./index.php" method="POST">
                         <label for="name">Imię i nazwisko </label>
                         <input type="text" name="name" id="name" placeholder="Twoje imię i nazwisko..." required>
                         <label for="email">Adres e-mail</label>

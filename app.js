@@ -43,61 +43,33 @@ var recommendationsHeadline = document.querySelector(
 var recommendationsMap = document.querySelector(".recommendations__map");
 var recommendationsSlider = document.querySelector(".recommendations__slider");
 
+let text = [...textAbout.innerText];
+
+var letterIndex = -2;
+let once = 0;
+function addLetter() {
+  letterIndex++;
+  if (letterIndex < `${text.length - 1}`) {
+    setTimeout(function () {
+      textAbout.textContent += text[letterIndex];
+      addLetter();
+    }, 40);
+  }
+}
 document.addEventListener("scroll", () => {
-  if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
-    scetionAbout.style.animationPlayState = "running";
-    const txt5 = textAbout.innerText;
-    textAbout.innerText = "";
-    let index5 = 0;
-    let indexLetter5 = 0;
-    const addTextAbout = () => {
-      if (indexLetter5 >= 0) {
-        textAbout.textContent += txt5[index5][indexLetter5];
-      }
-      indexLetter5++;
-      if (indexLetter5 === txt5[index5].length) {
-        index5++;
-        if (index5 === txt5.length) return;
-        textAbout;
-        return setTimeout(() => {
-          indexLetter5 = 0;
-          textAbout.textContent += "";
-          addTextAbout();
-        }, 30);
-      }
-      setTimeout(addTextAbout, 100);
-      // Użyj w środku setTimeout
-    };
-
-    setTimeout(addTextAbout, 100);
-  }
-  if (`${scetionGallery.offsetTop - 200}` < window.scrollY) {
+  if (`${scetionGallery.offsetTop - 300}` < window.scrollY) {
     scetionGallery.style.animationPlayState = "running";
-    const txt5 = textAbout.innerText;
-    textAbout.innerText = "";
-    let index5 = 0;
-    let indexLetter5 = 0;
-    const addTextAbout = () => {
-      if (indexLetter5 >= 0) {
-        textAbout.textContent += txt5[index5][indexLetter5];
-      }
-      indexLetter5++;
-      if (indexLetter5 === txt5[index5].length) {
-        index5++;
-        if (index5 === txt5.length) return;
-        textAbout;
-        return setTimeout(() => {
-          indexLetter5 = 0;
-          textAbout.textContent += "";
-          addTextAbout();
-        }, 30);
-      }
-      setTimeout(addTextAbout, 100);
-      // Użyj w środku setTimeout
-    };
-
-    setTimeout(addTextAbout, 2000);
   }
+  if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {
+    if (once > 1);
+    else {
+      textAbout.innerText = "";
+      once++;
+      scetionAbout.style.animationPlayState = "running";
+      addLetter();
+    }
+  }
+
   if (`${portfolioHeadline.offsetTop - 600}` < window.scrollY) {
     portfolioHeadline.style.animationPlayState = "running";
   }
