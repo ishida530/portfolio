@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <link preload rel="stylesheet" href="../css/header.css" />
-    <link preload rel="stylesheet" href="../css/main.css" />
-    <link preload rel="stylesheet" href="../css/section.css" />
-    <link preload rel="stylesheet" href="../css/portfolio.css" />
-    <link preload rel="stylesheet" href="../css/technologies.css" />
-    <link preload rel="stylesheet" href="../css/recommendations.css" />
-    <link preload rel="stylesheet" href="../css/form.css" />
-    <link preload rel="stylesheet" href="../css/footer.css" />
-    <link preload rel="stylesheet" href="../css/animation.css" />
+    <link preload rel="stylesheet" href="./css/header.css" />
+    <link preload rel="stylesheet" href="./css/main.css" />
+    <link preload rel="stylesheet" href="./css/section.css" />
+    <link preload rel="stylesheet" href="./css/portfolio.css" />
+    <link preload rel="stylesheet" href="./css/technologies.css" />
+    <link preload rel="stylesheet" href="./css/recommendations.css" />
+    <link preload rel="stylesheet" href="./css/form.css" />
+    <link preload rel="stylesheet" href="./css/footer.css" />
+    <link preload rel="stylesheet" href="./css/animation.css" />
 
 
 
