@@ -45,11 +45,11 @@ var recommendationsSlider = document.querySelector(".recommendations__slider");
 
 let text = [...textAbout.innerText];
 
-var letterIndex = -1;
+var letterIndex = -2;
 let once = 0;
 function addLetter() {
   letterIndex++;
-  if (letterIndex < text.length) {
+  if (letterIndex < `${text.length - 1}`) {
     setTimeout(function () {
       textAbout.textContent += text[letterIndex];
       addLetter();
@@ -57,7 +57,7 @@ function addLetter() {
   }
 }
 document.addEventListener("scroll", () => {
-  if (`${scetionGallery.offsetTop - 200}` < window.scrollY) {
+  if (`${scetionGallery.offsetTop - 300}` < window.scrollY) {
     scetionGallery.style.animationPlayState = "running";
   }
   if (`${scetionAbout.offsetTop - 450}` < window.scrollY) {

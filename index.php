@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -21,22 +19,37 @@
     <link preload rel="stylesheet" href="../css/technologies.css" />
     <link preload rel="stylesheet" href="../css/recommendations.css" />
     <link preload rel="stylesheet" href="../css/form.css" />
+    <link preload rel="stylesheet" href="../css/footer.css" />
+    <link preload rel="stylesheet" href="../css/animation.css" />
 
 
 
 
 
+
+    <script>
+        window.addEventListener('load', function () {
+            var load_screen = document.getElementById('load_screen');
+            setTimeout(() => {
+                document.body.removeChild(load_screen);
+            }, 3500);
+        })
+    </script>
 
 </head>
 
 <body style="overflow-x: hidden;">
+    <div id="load_screen">
+        <div class="loader"></span>
+        </div>
+    </div>
     <div class="container-fluid ">
         <header class=" d-flex d-flex flex-column flex-lg-row d-flex justify-content-between">
             <div class="logo mt-3 ml-0 ml-md-5">
-                <img class="header__div__logo img-fluid" src="../Portfolio.png" alt="" />
+                <img class="header__div__logo img-fluid" src="./img/Portfolio.png" alt="" />
             </div>
             <div class="header__div__background d-none d-lg-flex">
-                <img class="img-fluid" src="./Layer 2 copy.png" alt="" />
+                <img class="img-fluid" src="./img/Layer 2 copy.png" alt="" />
             </div>
 
             <nav class="navbar navbar-expand-lg navbar-dark d-flex flex-column d-flex justify-content-end w-100">
@@ -45,15 +58,20 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse  w-100" id="navbarNavAltMarkup">
 
-                    <div class="navbar-nav mr-0 mr-md-5 nav__div__list d-flex align-items-center justify-content-start">
-                        <a class="nav-item nav-link nav__div__item mr-0 mr-lg-2" href="#">O mnie <span
+                    <div class="navbar-nav mr-0 mr-md-5 nav__div__list d-flex align-items-center justify-content-end">
+                        <a class="nav-item nav-link nav__div__item mr-0 mr-lg-1" href="#section__about">O mnie <span
                                 class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link  nav__div__item mr-0 mr-lg-2" href="#">Technologie</a>
-                        <a class="nav-item nav-link nav__div__item mr-0 mr-lg-2" href="#">Projekty</a>
-                        <a class="nav-item nav-link text-center nav__div__button type3 mr-0 mr-lg-5" type="button"
-                            href="#">Kontakt</a>
+                        <a class="nav-item nav-link nav__div__item mr-0 mr-lg-1"
+                            href="#section__portfolio">Portfolio</a>
+
+                        <a class="nav-item nav-link  nav__div__item mr-0 mr-lg-1"
+                            href="#section__technologies">Technologie</a>
+                        <a class="nav-item nav-link  nav__div__item mr-0 mr-md-0 mr-lg-5 recoBtn "
+                            href="#section__recommendations">Rekomendacje</a>
+                        <a class="nav-item nav-link text-center nav__div__button type3 mr-0 " type="button"
+                            href="#section__form">Kontakt</a>
                     </div>
                 </div>
             </nav>
@@ -62,23 +80,29 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <main class="ml-0 ml-md-5 mr-0 mr-md-5 main d-flex flex-column flex-md-row  justify-content-between w-100 ">
+            <main class="ml-0 ml-md-5 mr-0 mr-md-5 main d-flex flex-column flex-md-row  justify-content-between w-100  "
+                id="section__main">
                 <div class="main__welcome  ml-lg-0 col-md-6">
                     <div class="main__welcome__name">
-                        <p class="hello">Hello, I am</p>
-                        <h1>Pawel <br> Sawczuk</h1>
-                        <p class="position">A junior <span>front-end</span> developer</p>
+                        <p class="hello">Cześć, jestem</p>
+                        <h1 class="nameWelcome">Paweł <br> Sawczuk</h1>
+                        <p class="position">junior <span class="positionSpan">front-end</span> developer</p>
                     </div>
                     <div class="main__welcome__social mb-5 mb-lg-0">
                         <div class="">
-                            <p>Find Me on</p>
-                            <a href="https://www.linkedin.com/in/pawe%C5%82-sawczuk-a7a0911a6/"><img
-                                    src="./img/linked.png" alt=""></a>
+                            <p class="findMe">Znajdź mnie na</p>
+                            <div>
+                                <a id="linkedIcon" class="linkedIcon mr-5" href="https://github.com/ishida530"><img
+                                        src="./img/linked.png" alt=""></a>
+                                <a id="linkedIcon" class="linkedIcon" href="https://github.com/ishida530"><img
+                                        src="./img/github.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                     <div class="main__welcome__buttons mt-5 d-flex flex-column flex-md-row justify-content-start">
-                        <a href="#" class="hireMeBtn mr-0 mr-sm-0 mr-md-5 mr-lg-5">Hire me</a>
-                        <a href="#" class="hireMeBtn ml-0 ml-sm-0 ml-ml-5 ml-lg-5 mt-3 mt-md-0">Portfolio</a>
+                        <a href="#" class="hireMeBtn mr-0 mr-sm-0 mr-md-5 mr-lg-5">Technologie</a>
+                        <a href="#section__portfolio"
+                            class="hireMeBtn ml-0 ml-sm-0 ml-ml-5 ml-lg-5 mt-3 mt-md-0">Portfolio</a>
 
 
                     </div>
@@ -91,18 +115,17 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <section class="section d-flex flex-column flex-xl-row ">
+            <section class="section d-flex flex-column flex-xl-row " id="section__about">
                 <div class="section__about col-12 col-xl-6  align-items-between mt-5 ml-0 ml-md-5 mr-0 mr-md-5">
-                    <h2 class="">About Me</h2>
+                    <h2 class="">O mnie</h2>
                     <div class="">
-                        <p class="pr-0 pr-xs-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-                            voluptate
-                            deserunt
-                            minus
-                            magnam a dignissimos laboriosam, illo culpa non omnis. <br><br> Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Voluptatibus, mollitia.</p>
+                        <p class="pr-0 pr-xs-3 txt"> Moim głównym celem zawodowym jest znalezienie pracy, która da mi
+                            możliwość pogłębienia i doskonalenia nabytych wcześniej umiejętności programistycznych,
+                            zaangażowania się w ciekawe i kreatywne projekty oraz podniesienia kwalifikacji z zakresu
+                            programowania Front-End. Przede wszystkim chcę się skupić na nauce języka Javascript i
+                            biblioteki React. </p>
                     </div>
-                    <a href="#" class="cv">Download CV</a>
+                    <a href="./CV Pawel Sawczuk ENG.pdf" class="cv">Pobierz CV CV</a>
                 </div>
                 <div class="section__gallery col-12 col-xl-6 ">
                     <div class="swiper-container ">
@@ -125,31 +148,33 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <section class="section__portfolio">
+            <section class="section__portfolio" id="section__portfolio">
                 <div class="portfolio__headline   pl-5 mt-5 ml-0 ml-md-5 mr-0 mr-md-5">
                     <h2>Portfolio</h2>
                 </div>
                 <div class="portfolio__gallery d-flex flex-row justify-content-between flex-wrap col-12 ">
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
-                        <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                        <div class="layerImg"><a href="https://ishida530.github.io/locationweathermap/">
+                                <img class="" src="./img/portfolio1.png" alt="">
+                                <p>API/AXIOS/JAVASCRIPT</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
                         <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                            <a href="https://ishida530.github.io/portfolio-projectone/">
+                                <img class="" src="./img/portfolio2.png" alt="">
+                                <p>HTML/SCSS/BOOTSTRAP/JQUERY</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-12 col-xl-3 d-flex justify-content-center">
                         <div class="layerImg">
-                            <img class="img-fluid" src="./img/abad.png" alt="">
-                            <p>Lorem ipsum dolor sit amet.</p>
-
+                            <a href="https://ishida530.github.io/lpexample/">
+                                <img class="" src="./img/portfolio3.png" alt="">
+                                <p>HTML/SCSS/BOOTSTRAP/JAVASCRIPT</p>
+                            </a>
                         </div>
                     </div>
 
@@ -161,7 +186,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <section class="section__technologies">
+            <section class="section__technologies" id="section__technologies">
                 <div class="technologies__headline d-flex justify-content-center">
                     <h2>Technologies</h2>
                 </div>
@@ -187,9 +212,9 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <section class="section__recommendations col-12">
+            <section class="section__recommendations col-12" id="section__recommendations">
                 <div class="recommendations__headline d-flex justify-content-center">
-                    <h2>Rekomendacje</h2>
+                    <h2 class="recoTittle">Rekomendacje</h2>
                 </div>
                 <div class="recommendations__box d-flex flex-column flex-xl-row ">
                     <div class="recommendations__map col-12 col-xl-6 d-flex justify-content-center">
@@ -231,46 +256,70 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <section class="section__form">
+            <section class="section__form" id="section__form">
                 <div class="form__headline">
-                    <h2>Let’s Make Something <br>
-                        Great Together</h2>
+                    <h2>Zróbmy razem coś fajnego</h2>
                 </div>
                 <div class="form__formular d-flex flex-column justify-content-center">
-                    <form class="d-flex flex-column" action="./index.php" method="post">
-                        <label for="name">Name and last name </label>
-                        <input type="text" name="name" id="name" placeholder="Your name and last name..." required>
-                        <label for="email">Adress e-mail</label>
-                        <input type="email" name="email" id="email" placeholder="Your adress e-mail..." required>
+                    <form class="d-flex flex-column" action="./index.php">
+                        <label for="name">Imię i nazwisko </label>
+                        <input type="text" name="name" id="name" placeholder="Twoje imię i nazwisko..." required>
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Twój adres e-mail..." required>
 
-                        <label for="message">Subject</label>
-                        <textarea id="message" name="text" class="message" placeholder="Write something..." required
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="text" class="message" placeholder="Treść wiadomości..." required
                             maxlength="200" style="height:200px"></textarea>
 
                         <input class="sendBtn" name="sbumit" type="submit" value="Wyślij">
+                   
+                        <?php
 
-                       <?php
-   $header = "From: ishida530@gmail.com \nContent-Type:".
-             ' text/plain;charset="UTF-8"'.
-             "\nContent-Transfer-Encoding: 8bit";
-   $to = "ishida530@gmail.com";
-   $subject = "Wiadomość testowa";
-   $message = "Witaj to wiadomość testowa";
-   mail($to, $subject, $message, $header)
+$to = 'ishida530@gmail.com';
+$name= $_POST['name']
+$email = $_POST'[email']
 
-       if(mail($to, $subject, $message, $header)){
-   echo "<h2>Poprawnie wysłano e-mail</h2>";
-}
-else{
-   echo "<h2>Wystąpił nieoczekiwany błąd, spróbuj jeszcze raz...</h2>"
-}
-       
+$subject='Nowa wiadomość e-mail od ' . $name . '(' . $email . ')';
+
+$message = $_POST['message']
+$headers='From:';
+$headers='Content-Type: text/html; charset=urf-8\r\n';
+
+
+mail($to,$subject,$message, $headers);
+$_send = mail($to,$subject,$message, $headers);
+ if($_send){
+     echo "<h2>Wiadomość wysłana</h2>"
+ }
+ else {
+    echo "<h2>BŁĄD. Coś poszło nie tak...</h2>"
+
+ }
+
 ?>
-
-
                     </form>
                 </div>
             </section>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <footer class="section__footer">
+                <div class="footer__box__logo d-flex justify-content-center"><img class="img-fluid"
+                        src="./img/Portfolio.png" alt="">
+                </div>
+                <div class="footer__menu">
+                    <ul class="d-flex justify-content-center flex-wrap">
+                        <li><a href="#section__about">O mnie</a></li>
+                        <li><a href="#section__portfolio">Projekty</a></li>
+                        <li><a href="#section__technologies">Technologie</a></li>
+                        <li><a href="#section__recommendations">Rekomendacje</a> </li>
+                    </ul>
+                </div>
+                <div class="footer__copy d-flex justify-content-center">
+                    <p>Copyright &copy 2021 Shoqer | All rights reserved</p>
+                </div>
+            </footer>
         </div>
     </div>
 
